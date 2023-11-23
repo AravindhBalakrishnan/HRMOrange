@@ -44,6 +44,12 @@ public class Example1
 		String actualLoginTitle = driver.findElement(By.xpath("//*[@id=\"app\"]/div[1]/div/div[1]/div/div[2]/h5")).getText();
 		Assert.assertEquals(actualLoginTitle, "Login");
 	}
+	@Test(priority = 4)
+	public void verifyUserName()
+	{
+		String actualUserName = driver.findElement(By.xpath("//label[text() = 'Username'] ")).getText();
+		Assert.assertEquals(actualUserName, "Username");
+	}
 	@AfterTest
 	public void tearDown()
 	{
